@@ -72,6 +72,11 @@ p {
   margin-bottom: 1em;
 }
 
+ul {
+  line-height: 1.4;
+  margin-bottom: 1em;
+}
+
 a {
   text-decoration: none;
   color: $blue;
@@ -83,6 +88,12 @@ img { max-width: 100%; height: auto; }
 .large {
   font-size: 1.33em;
   line-height: 1;
+}
+
+// Tweak for line-height of FontAwesome icons
+.fa {
+  p &,
+  li & { line-height: 0.8;}
 }
 
 // Forms
@@ -153,6 +164,8 @@ img { max-width: 100%; height: auto; }
 
 // Main navigation
 .nav {
+  line-height: 1;
+  margin: 0;
   display: flex;
   padding: 0 5%;
   text-align: center;
@@ -164,7 +177,7 @@ img { max-width: 100%; height: auto; }
   }
   li {
     padding: 1em;
-    &.home { flex-grow: 1; padding: 1em 0; }
+    &.home { flex-grow: 1; padding: 0.5em 0; }
     &:last-child {
       @media (min-width: $screen-md){ padding: 1em 0 1em 1em; }
     }
@@ -182,12 +195,11 @@ img { max-width: 100%; height: auto; }
   font-size: 0.75em;
   line-height: 1.6;
   li {
+    ul { margin: 0; }
     li { padding-left: 1em; }
     a {
-      color: $white;
       text-transform: uppercase;
       letter-spacing: 0.125em;
-      &:hover { color: $blue; }
     }
   }
 }
@@ -313,6 +325,10 @@ footer[role=banner]{
   @media (min-width: $screen-md){
     flex-direction: row;
     padding: 3em 5% 1em;
+  }
+  a {
+    color: $white;
+    &:hover { color: $blue; }
   }
   .copyright {
     font-family: $font-primary;

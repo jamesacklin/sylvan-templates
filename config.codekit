@@ -49,6 +49,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/logo-tiny.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2392,
+		"inputAbbreviatedPath": "\/images\/logo-tiny.png",
+		"outputAbbreviatedPath": "\/images\/logo-tiny.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/logo-white-large.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -56,6 +67,50 @@
 		"initialSize": 17485,
 		"inputAbbreviatedPath": "\/images\/logo-white-large.png",
 		"outputAbbreviatedPath": "\/images\/logo-white-large.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/plant-circle-1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 56508,
+		"inputAbbreviatedPath": "\/images\/plant-circle-1.png",
+		"outputAbbreviatedPath": "\/images\/plant-circle-1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/plant-circle-2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 52092,
+		"inputAbbreviatedPath": "\/images\/plant-circle-2.png",
+		"outputAbbreviatedPath": "\/images\/plant-circle-2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/plant-circle-3.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 56965,
+		"inputAbbreviatedPath": "\/images\/plant-circle-3.png",
+		"outputAbbreviatedPath": "\/images\/plant-circle-3.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/plant-drawing.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14875,
+		"inputAbbreviatedPath": "\/images\/plant-drawing.png",
+		"outputAbbreviatedPath": "\/images\/plant-drawing.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -136,13 +191,13 @@
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
-	"displayValue": "untitled folder",
-	"displayValueWasSetByUser": 0,
+	"displayValue": "Sylvan Gardens Templates",
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "pencil_gray"
 	},
 "projectSettings": {
 	"alwaysUseExternalServer": 0,
-	"animateCSSInjections": 1,
+	"animateCSSInjections": 0,
 	"autoApplyPSLanguageSettingsStyle": 0,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
 	"autoSyncProjectSettingsFile": 1,

@@ -93,6 +93,10 @@ p {
   line-height: 1.4;
   margin-bottom: 1em; }
 
+ul {
+  line-height: 1.4;
+  margin-bottom: 1em; }
+
 a {
   text-decoration: none;
   color: #00b4ff; }
@@ -106,6 +110,9 @@ img {
 .large {
   font-size: 1.33em;
   line-height: 1; }
+
+p .fa, li .fa {
+  line-height: 0.8; }
 
 .form-group {
   margin-bottom: 1em; }
@@ -169,6 +176,8 @@ img {
       cursor: disabled; }
 
 .nav {
+  line-height: 1;
+  margin: 0;
   display: flex;
   padding: 0 5%;
   text-align: center;
@@ -182,7 +191,7 @@ img {
     padding: 1em; }
     .nav li.home {
       flex-grow: 1;
-      padding: 1em 0; }
+      padding: 0.5em 0; }
     @media (min-width: 48em) {
       .nav li:last-child {
         padding: 1em 0 1em 1em; } }
@@ -196,14 +205,13 @@ img {
 .nav-tree {
   font-size: 0.75em;
   line-height: 1.6; }
+  .nav-tree li ul {
+    margin: 0; }
   .nav-tree li li {
     padding-left: 1em; }
   .nav-tree li a {
-    color: white;
     text-transform: uppercase;
     letter-spacing: 0.125em; }
-    .nav-tree li a:hover {
-      color: #00b4ff; }
 
 .hero-home {
   position: relative;
@@ -310,6 +318,10 @@ footer[role=banner] {
     footer[role=banner] {
       flex-direction: row;
       padding: 3em 5% 1em; } }
+  footer[role=banner] a {
+    color: white; }
+    footer[role=banner] a:hover {
+      color: #00b4ff; }
   footer[role=banner] .copyright {
     font-family: "Myriad Pro";
     font-size: 0.8em;
