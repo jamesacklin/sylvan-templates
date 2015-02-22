@@ -25,10 +25,51 @@ $screen-md: 48em;
 $screen-lg: 76.5em;
 $screen-xl: 114em;
 
+* { box-sizing: border-box; }
+
 body {
   background: $navy;
   color: $white;
   font-family: $font-primary;
+  font-size: 13pt;
+  @media (min-width: $screen-lg){
+    font-size: 15pt;
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  color: $green;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  text-shadow: 0 0.125em 0 rgba(0,0,0,0.25);
+}
+
+h1 {
+  font-size: 2.25em;
+  margin-bottom: 1em;
+}
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.75em;
+}
+h3 {
+  font-size: 1.75em;
+  margin-bottom: 0.575em;
+}
+h4 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+h5 {
+  font-size: 1.25em;
+  margin-bottom: 0.5em;
+}
+
+p {
+  font-family: $font-secondary;
+  line-height: 1.4;
+  margin-bottom: 1em;
 }
 
 a {
@@ -37,14 +78,47 @@ a {
   &:hover { color: $green; }
 }
 
+img { max-width: 100%; height: auto; }
 
+.large { font-size: 1.25em; }
 
+// Buttons
+.button {
+  @include transition(all 0.15s linear);
+  display: inline-flex;
+  font-size: 0.8em;
+  background: $navy;
+  color: $white;
+  line-height: 1;
+  padding: 0.6em 2em 0.45em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5em;
+  &:hover {
+    background: $green;
+    color: $white;
+  }
+  &.button-primary {
+    background: $blue;
+    &:hover { background: $orange; }
+  }
+  &.button-cta {
+    background: $orange;
+    &:hover { background: $blue; }
+  }
+  &.button-normal {
+    background: $green;
+    &:hover { background: $blue; }
+  }
+}
+
+// Main navigation
 .nav {
   display: flex;
   padding: 0 5%;
   text-align: center;
   flex-direction: column;
-  font-size: 1.125em;
   @media (min-width: $screen-md){
     flex-direction: row;
     align-items: center;
@@ -65,6 +139,91 @@ a {
   }
 }
 
+// Homepage hero
+.hero-home {
+  text-align: center;
+  width: 100%;
+  height: 90vh;
+  min-height: 36.25em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: stretch;
+  background: url(../images/home-hero.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  .content {
+    width: 100%;
+    padding: 0 5%;
+    text-align: center;
+  }
+  .intro {
+    margin: 0 auto 1em;
+    font-size: 1.875em;
+    font-style: italic;
+    max-width: 22em;
+  }
+  .button {
+    font-size: 1.25em;
+  }
+}
+
+// Home page content
+.home-content {
+  background: url(../images/topo-white.png) 50% 50% repeat $navy;
+  background-size: auto;
+  min-height: 900px;
+}
+
+// Home page mission statement
+.mission {
+  @include clearfix;
+  padding: 2em 5% 1em;
+  margin: 0 auto;
+  max-width: 50em;
+  @media (min-width: $screen-lg){
+    padding: 3em 5% 3em;
+  }
+  img {
+    display: block;
+    margin: 0 auto 1em;
+    max-width: 6em;
+    @media (min-width: $screen-md){
+      float: left;
+      width: 30%;
+      margin: 0 5%;
+    }
+  }
+  p {
+    @media (min-width: $screen-md){
+      padding-top: 3em;
+      margin-left: 10%;
+    }
+  }
+}
+
+// 3-column callouts
+.callouts {
+  display: flex;
+  flex-direction: column;
+  margin: 2em 0;
+  @media (min-width: $screen-md) {
+    flex-direction: row;
+    padding: 0 5%;
+    margin: 2em 0 0;
+  }
+  .callout {
+    text-align: center;
+    margin-bottom: 2em;
+    padding: 0 5%;
+    @media (min-width: $screen-md) {
+      width: 33.3333%;
+      padding: 0 1.5%;
+    }
+  }
+}
+
+// Article page content
 .page-content {
   background: $white;
   color: $black;
