@@ -55,7 +55,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 body {
   background: #031d2a;
   color: white;
-  font-family: "Myriad Pro";
+  font-family: "Myriad Pro", "Myriad", "Avenir Next", sans-serif;
   font-size: 13pt; }
   @media (min-width: 76.5em) {
     body {
@@ -89,7 +89,7 @@ h5 {
   margin-bottom: 0.5em; }
 
 p {
-  font-family: "Minion Pro";
+  font-family: "Minion Pro", "Myriad", "Hoefler Text", "Georgia", serif;
   line-height: 1.4;
   margin-bottom: 1em; }
 
@@ -122,7 +122,7 @@ p .fa, li .fa {
     display: block;
     margin-bottom: 0.25em; }
   .form-group .form-control {
-    font-family: "Myriad Pro";
+    font-family: "Myriad Pro", "Myriad", "Avenir Next", sans-serif;
     font-size: 16px;
     width: 100%;
     padding: 0.5em 0.75em 0.4em;
@@ -142,7 +142,7 @@ p .fa, li .fa {
   -webkit-transition: all 0.15s linear;
   transition: all 0.15s linear;
   -webkit-appearance: none;
-  font-family: "Myriad Pro";
+  font-family: "Myriad Pro", "Myriad", "Avenir Next", sans-serif;
   display: inline-flex;
   font-size: 0.8em;
   background: #031d2a;
@@ -227,6 +227,9 @@ p .fa, li .fa {
   background: url(../images/home-hero.jpg) 50% 50% no-repeat;
   background-size: cover;
   box-shadow: 0 0 3em rgba(0, 0, 0, 0.33); }
+  @media (max-width: 48em) {
+    .hero-home {
+      padding-top: 5em; } }
   .hero-home:hover:after {
     bottom: 1em;
     opacity: 0.75; }
@@ -286,7 +289,7 @@ p .fa, li .fa {
 .callouts {
   display: flex;
   flex-direction: column;
-  margin: 2em 0; }
+  margin: 0 0 3em; }
   @media (min-width: 48em) {
     .callouts {
       flex-direction: row;
@@ -295,7 +298,7 @@ p .fa, li .fa {
   .callouts .callout {
     text-align: center;
     margin-bottom: 2em;
-    padding: 0 5%; }
+    padding: 1em 5% 0; }
     .callouts .callout img {
       margin-bottom: 0.5em; }
     @media (min-width: 48em) {
@@ -323,7 +326,7 @@ footer[role=banner] {
     footer[role=banner] a:hover {
       color: #00b4ff; }
   footer[role=banner] .copyright {
-    font-family: "Myriad Pro";
+    font-family: "Myriad Pro", "Myriad", "Avenir Next", sans-serif;
     font-size: 0.8em;
     margin: 2em 0;
     font-weight: bold; }
