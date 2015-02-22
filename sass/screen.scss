@@ -306,13 +306,19 @@ img { max-width: 100%; height: auto; }
 footer[role=banner]{
   position: relative;
   box-shadow: 0 0 3em rgba(0,0,0,0.66);
-  padding: 1em 5%;
+  padding: 2em 5% 1em;
   border-top: 0.5em solid $green;
   display: flex;
   flex-direction: column;
   @media (min-width: $screen-md){
     flex-direction: row;
-    padding: 3em 5%;
+    padding: 3em 5% 1em;
+  }
+  .copyright {
+    font-family: $font-primary;
+    font-size: 0.8em;
+    margin: 2em 0;
+    font-weight: bold;
   }
   .footer-section {
     margin-bottom: 1em;
