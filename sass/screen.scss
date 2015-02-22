@@ -85,13 +85,43 @@ img { max-width: 100%; height: auto; }
   line-height: 1;
 }
 
+// Forms
+.form-group {
+  margin-bottom: 1em;
+  .control-label {
+    font-size: 0.8em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.25em;
+  }
+  .form-control {
+    font-family: $font-primary;
+    font-size: 16px;
+    width: 100%;
+    padding: 0.5em 0.75em 0.4em;
+    background: $navy;
+    color: $white;
+    border: 1px solid $navy-light;
+  }
+  input.form-control {
+    box-shadow: 0 0.5em 1em rgba(0,0,0,0.5) inset;
+    &:focus, &:active { background: darken($navy, 10%); }
+  }
+  select.form-control {
+    box-shadow: 0 -0.5em 1em rgba(0,0,0,0.5) inset;
+  }
+}
+
 // Buttons
 .button {
   @include transition(all 0.15s linear);
+  -webkit-appearance: none;
+  font-family: $font-primary;
   display: inline-flex;
   font-size: 0.8em;
   background: $navy;
   color: $white;
+  border: 0;
   line-height: 1;
   padding: 0.6em 2em 0.45em;
   text-align: center;
@@ -113,6 +143,11 @@ img { max-width: 100%; height: auto; }
   &.button-normal {
     background: $green;
     &:hover { background: $blue; }
+  }
+  &.button-disabled {
+    background: $navy-light;
+    color: $navy;
+    &:hover { cursor: disabled; }
   }
 }
 
@@ -142,8 +177,24 @@ img { max-width: 100%; height: auto; }
   }
 }
 
+// Navigation tree
+.nav-tree {
+  font-size: 0.75em;
+  line-height: 1.6;
+  li {
+    li { padding-left: 1em; }
+    a {
+      color: $white;
+      text-transform: uppercase;
+      letter-spacing: 0.125em;
+      &:hover { color: $blue; }
+    }
+  }
+}
+
 // Homepage hero
 .hero-home {
+  position: relative;
   text-align: center;
   width: 100%;
   height: 90vh;
@@ -155,6 +206,24 @@ img { max-width: 100%; height: auto; }
   align-content: stretch;
   background: url(../images/home-hero.jpg) 50% 50% no-repeat;
   background-size: cover;
+  box-shadow: 0 0 3em rgba(0,0,0,0.33);
+  &:hover {
+    &:after {
+      bottom: 1em;
+      opacity: 0.75;
+    }
+  }
+  &:after {
+    transition: all 0.2s ease;
+    content: "SCROLL FOR MORE";
+    font-size: 0.75em;
+    letter-spacing: 0.125em;
+    position: absolute;
+    bottom: 1.5em;
+    left: 50%;
+    @include transform(translate(-50%,0));
+    opacity: 0;
+  }
   .content {
     width: 100%;
     padding: 0 5%;
@@ -231,4 +300,26 @@ img { max-width: 100%; height: auto; }
 .page-content {
   background: $white;
   color: $black;
+}
+
+// Global footer
+footer[role=banner]{
+  position: relative;
+  box-shadow: 0 0 3em rgba(0,0,0,0.66);
+  padding: 1em 5%;
+  border-top: 0.5em solid $green;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $screen-md){
+    flex-direction: row;
+    padding: 3em 5%;
+  }
+  .footer-section {
+    margin-bottom: 1em;
+    h5 img { max-width: 10em; }
+    @media (min-width: $screen-md) {
+      width: 33.3333%;
+      padding: 3%;
+    }
+  }
 }

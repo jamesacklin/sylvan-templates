@@ -107,15 +107,40 @@ img {
   font-size: 1.33em;
   line-height: 1; }
 
+.form-group {
+  margin-bottom: 1em; }
+  .form-group .control-label {
+    font-size: 0.8em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.25em; }
+  .form-group .form-control {
+    font-family: "Myriad Pro";
+    font-size: 16px;
+    width: 100%;
+    padding: 0.5em 0.75em 0.4em;
+    background: #031d2a;
+    color: white;
+    border: 1px solid #245167; }
+  .form-group input.form-control {
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.5) inset; }
+    .form-group input.form-control:focus, .form-group input.form-control:active {
+      background: black; }
+  .form-group select.form-control {
+    box-shadow: 0 -0.5em 1em rgba(0, 0, 0, 0.5) inset; }
+
 .button {
   -moz-transition: all 0.15s linear;
   -o-transition: all 0.15s linear;
   -webkit-transition: all 0.15s linear;
   transition: all 0.15s linear;
+  -webkit-appearance: none;
+  font-family: "Myriad Pro";
   display: inline-flex;
   font-size: 0.8em;
   background: #031d2a;
   color: white;
+  border: 0;
   line-height: 1;
   padding: 0.6em 2em 0.45em;
   text-align: center;
@@ -137,6 +162,11 @@ img {
     background: #a8c618; }
     .button.button-normal:hover {
       background: #00b4ff; }
+  .button.button-disabled {
+    background: #245167;
+    color: #031d2a; }
+    .button.button-disabled:hover {
+      cursor: disabled; }
 
 .nav {
   display: flex;
@@ -163,7 +193,20 @@ img {
     .nav a:hover {
       color: #00b4ff; }
 
+.nav-tree {
+  font-size: 0.75em;
+  line-height: 1.6; }
+  .nav-tree li li {
+    padding-left: 1em; }
+  .nav-tree li a {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.125em; }
+    .nav-tree li a:hover {
+      color: #00b4ff; }
+
 .hero-home {
+  position: relative;
   text-align: center;
   width: 100%;
   height: 90vh;
@@ -174,7 +217,24 @@ img {
   justify-content: center;
   align-content: stretch;
   background: url(../images/home-hero.jpg) 50% 50% no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  box-shadow: 0 0 3em rgba(0, 0, 0, 0.33); }
+  .hero-home:hover:after {
+    bottom: 1em;
+    opacity: 0.75; }
+  .hero-home:after {
+    transition: all 0.2s ease;
+    content: "SCROLL FOR MORE";
+    font-size: 0.75em;
+    letter-spacing: 0.125em;
+    position: absolute;
+    bottom: 1.5em;
+    left: 50%;
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    opacity: 0; }
   .hero-home .content {
     width: 100%;
     padding: 0 5%;
@@ -238,3 +298,23 @@ img {
 .page-content {
   background: white;
   color: #1e1e1e; }
+
+footer[role=banner] {
+  position: relative;
+  box-shadow: 0 0 3em rgba(0, 0, 0, 0.66);
+  padding: 1em 5%;
+  border-top: 0.5em solid #a8c618;
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 48em) {
+    footer[role=banner] {
+      flex-direction: row;
+      padding: 3em 5%; } }
+  footer[role=banner] .footer-section {
+    margin-bottom: 1em; }
+    footer[role=banner] .footer-section h5 img {
+      max-width: 10em; }
+    @media (min-width: 48em) {
+      footer[role=banner] .footer-section {
+        width: 33.3333%;
+        padding: 3%; } }
