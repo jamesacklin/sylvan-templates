@@ -80,7 +80,10 @@ a {
 
 img { max-width: 100%; height: auto; }
 
-.large { font-size: 1.25em; }
+.large {
+  font-size: 1.33em;
+  line-height: 1;
+}
 
 // Buttons
 .button {
@@ -172,7 +175,7 @@ img { max-width: 100%; height: auto; }
 .home-content {
   background: url(../images/topo-white.png) 50% 50% repeat $navy;
   background-size: auto;
-  min-height: 900px;
+  padding-bottom: 1em;
 }
 
 // Home page mission statement
@@ -210,12 +213,13 @@ img { max-width: 100%; height: auto; }
   @media (min-width: $screen-md) {
     flex-direction: row;
     padding: 0 5%;
-    margin: 2em 0 0;
+    margin: 2em 0;
   }
   .callout {
     text-align: center;
     margin-bottom: 2em;
     padding: 0 5%;
+    img { margin-bottom: 0.5em; }
     @media (min-width: $screen-md) {
       width: 33.3333%;
       padding: 0 1.5%;

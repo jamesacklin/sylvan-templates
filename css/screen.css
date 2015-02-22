@@ -104,7 +104,8 @@ img {
   height: auto; }
 
 .large {
-  font-size: 1.25em; }
+  font-size: 1.33em;
+  line-height: 1; }
 
 .button {
   -moz-transition: all 0.15s linear;
@@ -189,7 +190,7 @@ img {
 .home-content {
   background: url(../images/topo-white.png) 50% 50% repeat #031d2a;
   background-size: auto;
-  min-height: 900px; }
+  padding-bottom: 1em; }
 
 .mission {
   overflow: hidden;
@@ -222,11 +223,13 @@ img {
     .callouts {
       flex-direction: row;
       padding: 0 5%;
-      margin: 2em 0 0; } }
+      margin: 2em 0; } }
   .callouts .callout {
     text-align: center;
     margin-bottom: 2em;
     padding: 0 5%; }
+    .callouts .callout img {
+      margin-bottom: 0.5em; }
     @media (min-width: 48em) {
       .callouts .callout {
         width: 33.3333%;
