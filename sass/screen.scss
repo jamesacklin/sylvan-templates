@@ -1,0 +1,71 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass";
+@import "compass/reset";
+
+// Colors
+$navy: rgb(3,29,42);
+$navy-light: rgb(36,81,103);
+$blue: rgb(0,180,255);
+$green: rgb(168,198,24);
+$orange: rgb(255,126,0);
+$white: rgb(255,255,255);
+$black: rgb(30,30,30);
+
+// Fonts
+$font-primary: "Myriad Pro";
+$font-secondary: "Minion Pro";
+
+// Breakpoints
+$screen-sm: 20em;
+$screen-md: 48em;
+$screen-lg: 76.5em;
+$screen-xl: 114em;
+
+body {
+  background: $navy;
+  color: $white;
+  font-family: $font-primary;
+}
+
+a {
+  text-decoration: none;
+  color: $blue;
+  &:hover { color: $green; }
+}
+
+
+
+.nav {
+  display: flex;
+  padding: 0 5%;
+  text-align: center;
+  flex-direction: column;
+  font-size: 1.125em;
+  @media (min-width: $screen-md){
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+  li {
+    padding: 1em;
+    &.home { flex-grow: 1; padding: 1em 0; }
+    &:last-child {
+      @media (min-width: $screen-md){ padding: 1em 0 1em 1em; }
+    }
+  }
+  a {
+    color: $white;
+    font-weight: bold;
+    text-transform: uppercase;
+    &:hover { color: $blue; }
+  }
+}
+
+.page-content {
+  background: $white;
+  color: $black;
+}
