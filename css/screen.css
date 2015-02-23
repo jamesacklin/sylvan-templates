@@ -352,9 +352,53 @@ p .fa, li .fa {
         width: 33.3333%;
         padding: 0 1.5%; } }
 
+.hero-page {
+  position: relative;
+  padding: 3em 5%;
+  background: url(../images/home-hero.jpg) 50% 50% no-repeat;
+  background-size: cover; }
+  @media (min-width: 48em) {
+    .hero-page {
+      padding: 3.5em 5%; } }
+  @media (min-width: 76.5em) {
+    .hero-page {
+      padding: 4em 5%; } }
+  @media (min-width: 114em) {
+    .hero-page {
+      padding: 7em 5%; } }
+  .hero-page h2 {
+    font-size: 2.25em;
+    margin-bottom: 0.25em; }
+    @media (min-width: 48em) {
+      .hero-page h2 {
+        font-size: 3.125em;
+        text-shadow: 0 0.075em 0 rgba(0, 0, 0, 0.25); } }
+    @media (min-width: 76.5em) {
+      .hero-page h2 {
+        margin-bottom: 0;
+        font-size: 4em;
+        text-shadow: 0 0.05em 0 rgba(0, 0, 0, 0.25); } }
+  .hero-page .subhead {
+    font-style: italic;
+    margin: 0; }
+    @media (min-width: 48em) {
+      .hero-page .subhead {
+        font-size: 1.125em; } }
+    @media (min-width: 76.5em) {
+      .hero-page .subhead {
+        font-size: 1.25em;
+        margin-top: 0.5em; } }
+    @media (min-width: 114em) {
+      .hero-page .subhead {
+        font-size: 1.5em;
+        margin-top: 1em;
+        padding-left: 5%;
+        max-width: 50%; } }
+
 .page-content {
   background: white;
-  color: #1e1e1e; }
+  color: #1e1e1e;
+  padding: 2em 5%; }
 
 footer[role=banner] {
   position: relative;
