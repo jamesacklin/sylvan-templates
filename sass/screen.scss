@@ -16,8 +16,8 @@ $white: rgb(255,255,255);
 $black: rgb(30,30,30);
 
 // Fonts
-$font-primary: "Myriad Pro", "Myriad", "Avenir Next", sans-serif;
-$font-secondary: "Minion Pro", "Myriad", "Hoefler Text", "Georgia", serif;
+$font-primary: "myriad-pro", "Myriad Pro", "Myriad", "Avenir Next", sans-serif;
+$font-secondary: "minion-pro", "Minion Pro", "Minion", "Hoefler Text", "Georgia", serif;
 
 // Breakpoints
 $screen-sm: 20em;
@@ -139,6 +139,9 @@ img { max-width: 100%; height: auto; }
   text-transform: uppercase;
   font-weight: bold;
   border-radius: 5em;
+  .wf-active & {
+    padding: 0.6em 2em 0.6em;
+  }
   &:hover {
     background: $green;
     color: $white;

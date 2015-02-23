@@ -55,7 +55,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 body {
   background: #031d2a;
   color: white;
-  font-family: "Myriad Pro", "Myriad", "Avenir Next", sans-serif;
+  font-family: "myriad-pro", "Myriad Pro", "Myriad", "Avenir Next", sans-serif;
   font-size: 13pt; }
   @media (min-width: 76.5em) {
     body {
@@ -89,7 +89,7 @@ h5 {
   margin-bottom: 0.5em; }
 
 p {
-  font-family: "Minion Pro", "Myriad", "Hoefler Text", "Georgia", serif;
+  font-family: "minion-pro", "Minion Pro", "Minion", "Hoefler Text", "Georgia", serif;
   line-height: 1.4;
   margin-bottom: 1em; }
 
@@ -122,7 +122,7 @@ p .fa, li .fa {
     display: block;
     margin-bottom: 0.25em; }
   .form-group .form-control {
-    font-family: "Myriad Pro", "Myriad", "Avenir Next", sans-serif;
+    font-family: "myriad-pro", "Myriad Pro", "Myriad", "Avenir Next", sans-serif;
     font-size: 16px;
     width: 100%;
     padding: 0.5em 0.75em 0.4em;
@@ -137,12 +137,13 @@ p .fa, li .fa {
     box-shadow: 0 -0.5em 1em rgba(0, 0, 0, 0.5) inset; }
 
 .button {
-  -moz-transition: all 0.15s linear;
-  -o-transition: all 0.15s linear;
   -webkit-transition: all 0.15s linear;
   transition: all 0.15s linear;
   -webkit-appearance: none;
-  font-family: "Myriad Pro", "Myriad", "Avenir Next", sans-serif;
+  font-family: "myriad-pro", "Myriad Pro", "Myriad", "Avenir Next", sans-serif;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-size: 0.8em;
   background: #031d2a;
@@ -154,6 +155,8 @@ p .fa, li .fa {
   text-transform: uppercase;
   font-weight: bold;
   border-radius: 5em; }
+  .wf-active .button {
+    padding: 0.6em 2em 0.6em; }
   .button:hover {
     background: #a8c618;
     color: white; }
@@ -178,19 +181,36 @@ p .fa, li .fa {
 .nav {
   line-height: 1;
   margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   padding: 0 5%;
   text-align: center;
-  flex-direction: column; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
   @media (min-width: 48em) {
     .nav {
-      flex-direction: row;
-      align-items: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
       text-align: left; } }
   .nav li {
     padding: 1em; }
     .nav li.home {
-      flex-grow: 1;
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
       padding: 0.5em 0; }
     @media (min-width: 48em) {
       .nav li:last-child {
@@ -219,11 +239,26 @@ p .fa, li .fa {
   width: 100%;
   height: 90vh;
   min-height: 36.25em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  align-content: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-content: stretch;
+      -ms-flex-line-pack: stretch;
+          align-content: stretch;
   background: url(../images/home-hero.jpg) 50% 50% no-repeat;
   background-size: cover;
   box-shadow: 0 0 3em rgba(0, 0, 0, 0.33); }
@@ -234,14 +269,14 @@ p .fa, li .fa {
     bottom: 1em;
     opacity: 0.75; }
   .hero-home:after {
-    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
     content: "SCROLL FOR MORE";
     font-size: 0.75em;
     letter-spacing: 0.125em;
     position: absolute;
     bottom: 1.5em;
     left: 50%;
-    -moz-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
@@ -287,12 +322,23 @@ p .fa, li .fa {
       margin-left: 10%; } }
 
 .callouts {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 0 0 3em; }
   @media (min-width: 48em) {
     .callouts {
-      flex-direction: row;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
       padding: 0 5%;
       margin: 2em 0; } }
   .callouts .callout {
@@ -315,18 +361,29 @@ footer[role=banner] {
   box-shadow: 0 0 3em rgba(0, 0, 0, 0.66);
   padding: 2em 5% 1em;
   border-top: 0.5em solid #a8c618;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
   @media (min-width: 48em) {
     footer[role=banner] {
-      flex-direction: row;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
       padding: 3em 5% 1em; } }
   footer[role=banner] a {
     color: white; }
     footer[role=banner] a:hover {
       color: #00b4ff; }
   footer[role=banner] .copyright {
-    font-family: "Myriad Pro", "Myriad", "Avenir Next", sans-serif;
+    font-family: "myriad-pro", "Myriad Pro", "Myriad", "Avenir Next", sans-serif;
     font-size: 0.8em;
     margin: 2em 0;
     font-weight: bold; }
