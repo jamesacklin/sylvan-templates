@@ -264,7 +264,7 @@ p .fa, li .fa {
   box-shadow: 0 0 3em rgba(0, 0, 0, 0.33); }
   @media (max-width: 48em) {
     .hero-home {
-      padding-top: 5em; } }
+      padding: 2em 0; } }
   .hero-home:hover:after {
     bottom: 1em;
     opacity: 0.75; }
