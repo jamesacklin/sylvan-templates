@@ -82,11 +82,15 @@ h3 {
 
 h4 {
   font-size: 1.5em;
-  margin-bottom: 0.5em; }
+  margin-bottom: 0.5em;
+  text-shadow: none;
+  color: #00b4ff; }
 
 h5 {
   font-size: 1.25em;
-  margin-bottom: 0.5em; }
+  margin-bottom: 0.5em;
+  text-shadow: none;
+  color: #00b4ff; }
 
 p {
   font-family: "minion-pro", "Minion Pro", "Minion", "Hoefler Text", "Georgia", serif;
@@ -261,7 +265,7 @@ p .fa, li .fa {
           align-content: stretch;
   background: url(../images/home-hero.jpg) 50% 50% no-repeat;
   background-size: cover;
-  box-shadow: 0 0 3em rgba(0, 0, 0, 0.33); }
+  box-shadow: 0 0 3em rgba(0, 0, 0, 0.33), 0 1px 0 rgba(255, 255, 255, 0.1) inset, 0 -1px 0 rgba(255, 255, 255, 0.1) inset; }
   @media (max-width: 48em) {
     .hero-home {
       padding: 2em 0; } }
@@ -356,7 +360,9 @@ p .fa, li .fa {
   position: relative;
   padding: 3em 5%;
   background: url(../images/home-hero.jpg) 50% 50% no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  position: relative;
+  box-shadow: 0 1em 2em rgba(0, 0, 0, 0.33), 0 1px 0 rgba(255, 255, 255, 0.1) inset, 0 -1px 0 rgba(255, 255, 255, 0.1) inset; }
   @media (min-width: 48em) {
     .hero-page {
       padding: 3.5em 5%; } }
@@ -395,10 +401,101 @@ p .fa, li .fa {
         padding-left: 5%;
         max-width: 50%; } }
 
+.page {
+  background: url(../images/topo-gray.png) top center repeat #f2f2f2;
+  padding: 0 5%; }
+
 .page-content {
+  overflow: hidden;
+  *zoom: 1;
+  position: relative;
   background: white;
-  color: #1e1e1e;
-  padding: 2em 5%; }
+  color: #1e1e1e; }
+  .page-content .breadcrumbs {
+    background: white; }
+  .page-content article {
+    background: white;
+    padding: 2em 5% 1em; }
+    @media (min-width: 48em) {
+      .page-content article {
+        float: left;
+        width: 66.666%; } }
+    .page-content article p:first-child {
+      font-size: 1.25em; }
+      @media (min-width: 48em) {
+        .page-content article p:first-child {
+          font-size: 1.5em; } }
+      @media (min-width: 76.5em) {
+        .page-content article p:first-child {
+          font-size: 1.625em; } }
+  .page-content aside {
+    background: white;
+    font-size: 0.8em;
+    padding: 2em 5% 3em;
+    border-top: 1px solid #CCC; }
+    @media (min-width: 48em) {
+      .page-content aside {
+        float: right;
+        width: 33.333333%;
+        max-width: 25em;
+        border-top: 0;
+        padding: 1em 5% 3em;
+        margin-top: 2em;
+        border-left: 1px solid #CCC; } }
+    .page-content aside section {
+      margin-bottom: 3em; }
+      .page-content aside section:last-child {
+        margin-bottom: 0; }
+
+.breadcrumb-trail {
+  display: none;
+  background: #f2f2f2;
+  font-size: 0.8em; }
+  @media (min-width: 48em) {
+    .breadcrumb-trail {
+      display: inline-block; } }
+  .breadcrumb-trail li {
+    display: inline-block;
+    margin: 0;
+    padding: 0.3em 2em 0.2em 3em;
+    position: relative; }
+    .breadcrumb-trail li:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-width: 1em 1em 1em 1em;
+      border-style: solid;
+      border-color: transparent transparent transparent #f2f2f2;
+      position: absolute;
+      right: -2em;
+      top: 0;
+      z-index: 1; }
+    .breadcrumb-trail li:before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-width: 1em 1em 1em 1em;
+      border-style: solid;
+      border-color: transparent transparent transparent white;
+      position: absolute;
+      right: -2.2em;
+      top: 0;
+      z-index: 1; }
+    .breadcrumb-trail li:last-child {
+      background: white; }
+      .breadcrumb-trail li:last-child:before, .breadcrumb-trail li:last-child:after {
+        display: none; }
+
+figure {
+  margin-bottom: 1em; }
+  figure figcaption {
+    font-family: "minion-pro", "Minion Pro", "Minion", "Hoefler Text", "Georgia", serif;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #686868;
+    margin: 0.5em 0 0; }
 
 footer[role=banner] {
   position: relative;
