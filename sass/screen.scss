@@ -13,6 +13,7 @@ $blue: rgb(0,180,255);
 $green: rgb(168,198,24);
 $orange: rgb(255,126,0);
 $white: rgb(255,255,255);
+$almost-white: rgb(242,242,242);
 $black: rgb(30,30,30);
 
 // Fonts
@@ -60,10 +61,14 @@ h3 {
 h4 {
   font-size: 1.5em;
   margin-bottom: 0.5em;
+  text-shadow: none;
+  color: $blue;
 }
 h5 {
   font-size: 1.25em;
   margin-bottom: 0.5em;
+  text-shadow: none;
+  color: $blue;
 }
 
 p {
@@ -224,7 +229,9 @@ img { max-width: 100%; height: auto; }
   align-content: stretch;
   background: url(../images/home-hero.jpg) 50% 50% no-repeat;
   background-size: cover;
-  box-shadow: 0 0 3em rgba(0,0,0,0.33);
+  box-shadow: 0 0 3em rgba(0,0,0,0.33),
+              0 1px 0 rgba(255,255,255,0.1) inset,
+              0 -1px 0 rgba(255,255,255,0.1) inset;
   &:hover {
     &:after {
       bottom: 1em;
@@ -314,11 +321,156 @@ img { max-width: 100%; height: auto; }
   }
 }
 
+
+// Article page hero
+.hero-page {
+  position: relative;
+  padding: 3em 5%;
+  background: url(../images/home-hero.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  position: relative;
+  box-shadow: 0 1em 2em rgba(0,0,0,0.33),
+              0 1px 0 rgba(255,255,255,0.1) inset,
+              0 -1px 0 rgba(255,255,255,0.1) inset;
+  @media (min-width: $screen-md){ padding: 3.5em 5%; }
+  @media (min-width: $screen-lg){ padding: 4em 5%; }
+  @media (min-width: $screen-xl){ padding: 7em 5%; }
+  h2 {
+    font-size: 2.25em;
+    margin-bottom: 0.25em;
+    @media (min-width: $screen-md){
+      font-size: 3.125em;
+      text-shadow: 0 0.075em 0 rgba(0,0,0,0.25);
+    }
+    @media (min-width: $screen-lg){
+      margin-bottom: 0;
+      font-size: 4em;
+      text-shadow: 0 0.05em 0 rgba(0,0,0,0.25);
+    }
+  }
+  .subhead {
+    font-style: italic;
+    margin: 0;
+    @media (min-width: $screen-md) {
+      font-size: 1.125em;
+    }
+    @media (min-width: $screen-lg) {
+      font-size: 1.25em;
+      margin-top: 0.5em;
+    }
+    @media (min-width: $screen-xl) {
+      font-size: 1.5em;
+      margin-top: 1em;
+      padding-left: 5%;
+      max-width: 50%;
+    }
+  }
+}
+
 // Article page content
+.page {
+  background: url(../images/topo-gray.png) top center repeat $almost-white;
+  padding: 0 5%;
+}
 .page-content {
+  @include clearfix;
+  position: relative;
   background: $white;
   color: $black;
+  .breadcrumbs {
+    background: $white;
+  }
+  article {
+    background: $white;
+    padding: 2em 5% 1em;
+    @media (min-width: $screen-md){
+      float: left;
+      width: 66.666%;
+    }
+    p:first-child {
+      font-size: 1.25em;
+      @media (min-width: $screen-md){ font-size: 1.5em; }
+      @media (min-width: $screen-lg){ font-size: 1.625em; }
+    }
+  }
+  aside {
+    background: $white;
+    font-size: 0.8em;
+    padding: 2em 5% 3em;
+    border-top: 1px solid #CCC;
+    @media (min-width: $screen-md){
+      float: right;
+      width: 33.333333%;
+      max-width: 25em;
+      border-top: 0;
+      padding: 1em 5% 3em;
+      margin-top: 2em;
+      border-left: 1px solid #CCC;
+    }
+    section {
+      margin-bottom: 3em;
+      &:last-child { margin-bottom: 0; }
+    }
+  }
 }
+
+.breadcrumb-trail {
+  display: none;
+  @media (min-width: $screen-md){
+    display: inline-block;
+  }
+  background: $almost-white;
+  font-size: 0.8em;
+  li {
+    display: inline-block;
+    margin: 0;
+    padding: 0.3em 2em 0.2em 3em;
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-width: 1em 1em 1em 1em;
+      border-style: solid;
+      border-color: transparent transparent transparent $almost-white;
+      position: absolute;
+      right: -2em; top: 0;
+      z-index: 1;
+    }
+    &:before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-width: 1em 1em 1em 1em;
+      border-style: solid;
+      border-color: transparent transparent transparent $white;
+      position: absolute;
+      right: -2.2em; top: 0;
+      z-index: 1;
+    }
+    &:first-child {
+    }
+    &:last-child {
+      background: $white;
+      &:before,
+      &:after { display: none; }
+    }
+  }
+}
+
+figure {
+  margin-bottom: 1em;
+  figcaption {
+    font-family: $font-secondary;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #686868;
+    margin: 0.5em 0 0;
+  }
+}
+
 
 // Global footer
 footer[role=banner]{
