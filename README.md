@@ -1,6 +1,6 @@
 # Sylvan Gardens Templates
 
-Front-end templates for Sylvan Gardens Lanscaping
+Front-end templates for Sylvan Gardens Landscaping
 
 - [Home Page](http://www.jamesacklin.com/sylvan-templates/index.html)
 - [Content Page](http://www.jamesacklin.com/sylvan-templates/page.html)
