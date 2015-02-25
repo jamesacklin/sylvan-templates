@@ -59,7 +59,8 @@ gulp.task('minify', function(){
 // minify JS, compile compass, and reload browser on changes.
 gulp.task('serve', ['clean', 'compile_lib', 'minify', 'compass'], function() {
   browserSync({
-    server: "./"
+    server: "./",
+    notify: "false"
   });
   gulp.watch("./sass/*.scss", ['compass']);
   gulp.watch("./*.html").on('change', reload);
