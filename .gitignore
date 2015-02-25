@@ -1,3 +1,6 @@
+.sass-cache
 .codekit-cache
+.temp
 components
 bower_components
+node_modules
