@@ -411,41 +411,9 @@ p .fa, li .fa {
   position: relative;
   background: white;
   color: #1e1e1e; }
-  .page-content .breadcrumbs {
-    background: white; }
-  .page-content article {
-    background: white;
-    padding: 2em 5% 1em; }
-    @media (min-width: 48em) {
-      .page-content article {
-        float: left;
-        width: 66.666%; } }
-    .page-content article p:first-child {
-      font-size: 1.25em; }
-      @media (min-width: 48em) {
-        .page-content article p:first-child {
-          font-size: 1.5em; } }
-      @media (min-width: 76.5em) {
-        .page-content article p:first-child {
-          font-size: 1.625em; } }
-  .page-content aside {
-    background: white;
-    font-size: 0.8em;
-    padding: 2em 5% 3em;
-    border-top: 1px solid #CCC; }
-    @media (min-width: 48em) {
-      .page-content aside {
-        float: right;
-        width: 33.333333%;
-        max-width: 25em;
-        border-top: 0;
-        padding: 1em 5% 3em;
-        margin-top: 2em;
-        border-left: 1px solid #CCC; } }
-    .page-content aside section {
-      margin-bottom: 3em; }
-      .page-content aside section:last-child {
-        margin-bottom: 0; }
+
+.breadcrumbs {
+  background: white; }
 
 .breadcrumb-trail {
   display: none;
@@ -488,6 +456,22 @@ p .fa, li .fa {
       .breadcrumb-trail li:last-child:before, .breadcrumb-trail li:last-child:after {
         display: none; }
 
+article {
+  background: white;
+  padding: 2em 5% 1em; }
+  @media (min-width: 48em) {
+    article {
+      float: left;
+      width: 66.666%; } }
+  article p:first-child {
+    font-size: 1.25em; }
+    @media (min-width: 48em) {
+      article p:first-child {
+        font-size: 1.5em; } }
+    @media (min-width: 76.5em) {
+      article p:first-child {
+        font-size: 1.625em; } }
+
 figure {
   margin-bottom: 1em; }
   figure figcaption {
@@ -496,6 +480,85 @@ figure {
     font-size: 0.9em;
     color: #686868;
     margin: 0.5em 0 0; }
+
+aside {
+  background: white;
+  font-size: 0.8em;
+  padding: 2em 5% 3em;
+  border-top: 1px solid #CCC; }
+  @media (min-width: 48em) {
+    aside {
+      float: right;
+      width: 33.333333%;
+      max-width: 25em;
+      border-top: 0;
+      padding: 1em 5% 3em;
+      margin-top: 2em;
+      border-left: 1px solid #CCC; } }
+  aside section {
+    margin-bottom: 3em; }
+    aside section:last-child {
+      margin-bottom: 0; }
+
+.gallery-content {
+  overflow: hidden;
+  *zoom: 1;
+  position: relative;
+  background: white;
+  color: #1e1e1e; }
+
+.gallery {
+  margin-top: 1em; }
+
+.gallery-entry {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1em; }
+  @media (min-width: 48em) {
+    .gallery-entry {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; } }
+
+.gallery-entry-image {
+  text-align: center; }
+  @media (min-width: 48em) {
+    .gallery-entry-image {
+      width: 66.6666%; }
+      .gallery-entry:nth-child(even) .gallery-entry-image {
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+            -ms-flex-order: 1;
+                order: 1; }
+      .gallery-entry-image img {
+        width: 100%; } }
+  @media (min-width: 76.5em) {
+    .gallery-entry-image {
+      width: 50%; } }
+
+.gallery-entry-description {
+  padding: 0.5em 5% 0;
+  font-style: italic; }
+  @media (min-width: 48em) {
+    .gallery-entry-description {
+      padding: 10%; }
+      .gallery-entry-description p {
+        max-width: 20em; }
+      .gallery-entry:nth-child(even) .gallery-entry-description {
+        text-align: right; } }
 
 footer[role=banner] {
   position: relative;

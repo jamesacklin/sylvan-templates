@@ -377,41 +377,10 @@ img { max-width: 100%; height: auto; }
   position: relative;
   background: $white;
   color: $black;
-  .breadcrumbs {
-    background: $white;
-  }
-  article {
-    background: $white;
-    padding: 2em 5% 1em;
-    @media (min-width: $screen-md){
-      float: left;
-      width: 66.666%;
-    }
-    p:first-child {
-      font-size: 1.25em;
-      @media (min-width: $screen-md){ font-size: 1.5em; }
-      @media (min-width: $screen-lg){ font-size: 1.625em; }
-    }
-  }
-  aside {
-    background: $white;
-    font-size: 0.8em;
-    padding: 2em 5% 3em;
-    border-top: 1px solid #CCC;
-    @media (min-width: $screen-md){
-      float: right;
-      width: 33.333333%;
-      max-width: 25em;
-      border-top: 0;
-      padding: 1em 5% 3em;
-      margin-top: 2em;
-      border-left: 1px solid #CCC;
-    }
-    section {
-      margin-bottom: 3em;
-      &:last-child { margin-bottom: 0; }
-    }
-  }
+}
+
+.breadcrumbs {
+  background: $white;
 }
 
 .breadcrumb-trail {
@@ -460,6 +429,20 @@ img { max-width: 100%; height: auto; }
   }
 }
 
+article {
+  background: $white;
+  padding: 2em 5% 1em;
+  @media (min-width: $screen-md){
+    float: left;
+    width: 66.666%;
+  }
+  p:first-child {
+    font-size: 1.25em;
+    @media (min-width: $screen-md){ font-size: 1.5em; }
+    @media (min-width: $screen-lg){ font-size: 1.625em; }
+  }
+}
+
 figure {
   margin-bottom: 1em;
   figcaption {
@@ -470,6 +453,72 @@ figure {
     margin: 0.5em 0 0;
   }
 }
+
+aside {
+  background: $white;
+  font-size: 0.8em;
+  padding: 2em 5% 3em;
+  border-top: 1px solid #CCC;
+  @media (min-width: $screen-md){
+    float: right;
+    width: 33.333333%;
+    max-width: 25em;
+    border-top: 0;
+    padding: 1em 5% 3em;
+    margin-top: 2em;
+    border-left: 1px solid #CCC;
+  }
+  section {
+    margin-bottom: 3em;
+    &:last-child { margin-bottom: 0; }
+  }
+}
+
+// Gallery pages
+.gallery-content {
+  @include clearfix;
+  position: relative;
+  background: $white;
+  color: $black;
+}
+
+.gallery {
+  margin-top: 1em;
+}
+
+.gallery-entry {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+  @media (min-width: $screen-md){
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.gallery-entry-image {
+  text-align: center;
+  @media (min-width: $screen-md){
+    width: 66.6666%;
+    .gallery-entry:nth-child(even) & {
+      order: 1;
+    }
+    img { width: 100%; }
+  }
+  @media (min-width: $screen-lg){ width: 50%; }
+}
+.gallery-entry-description {
+  padding: 0.5em 5% 0;
+  font-style: italic;
+  @media (min-width: $screen-md) {
+    padding: 10%;
+    p { max-width: 20em; }
+    .gallery-entry:nth-child(even) & {
+      text-align: right;
+    }
+  }
+}
+
 
 
 // Global footer
