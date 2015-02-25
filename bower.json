@@ -1,0 +1,21 @@
+{
+  "name": "sylvan-templates",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jamesacklin/sylvan-templates",
+  "authors": [
+    "James Acklin <james@acklindesign.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3"
+  }
+}
